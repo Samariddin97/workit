@@ -56,7 +56,7 @@ body {
   font-size: 18px;
   line-height: 32px;
   background-color: #fff;
-  color: #222;
+  color: var(--dark-purple);
 }
 
 img {
