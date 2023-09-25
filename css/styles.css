@@ -308,6 +308,19 @@ img {
   color: #fff;
 }
 
+.test-cta__box::after {
+  position: absolute;
+  right: 96px;
+  bottom: -24px;
+  width: 173px;
+  height: 137px;
+  z-index: 1;
+  transform: rotate(-145deg);
+  content: "";
+  background-image: url("../images/circles.svg");
+  background-size: contain;
+}
+
 .test-cta__picture {
   display: block;
 }
