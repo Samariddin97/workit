@@ -174,7 +174,23 @@ img {
 /* SITE-HEADER-HERO-WRAPPER */
 
 .site-header-hero-wrapper {
+  position: relative;
+  z-index: 1;
   background-color: var(--dark-purple);
+  padding-bottom: 255px;
+}
+
+.site-header-hero-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 68px;
+  background-image: url("../images/purple-addon.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
 }
 
 /* LOGO */
@@ -254,11 +270,11 @@ img {
 }
 
 .hero__img {
-  display: block;
-}
-
-.hero__button {
-  margin-bottom: 50px;
+  position: absolute;
+  z-index: 2;
+  bottom: -220px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* FEATURES */
@@ -393,8 +409,23 @@ img {
 }
 
 /* RESPONSIVE */
+@media only screen and (max-width: 1200px) {
+  .hero__img {
+    width: 630px;
+    bottom: -25%;
+  }
+}
+
 
 @media only screen and (max-width: 1024px) {
+  .site-header-hero-wrapper {
+    padding-bottom: 230px;
+  }
+
+  .hero__img {
+    width: 580px;
+  }
+
   .features {
     padding-top: 200px;
     padding-bottom: 100px;
@@ -475,6 +506,11 @@ img {
 @media only screen and (max-width: 768px) {
   .site-header-hero-wrapper {
     padding-top: 36px;
+    padding-bottom: 170px;
+  }
+
+  .site-header-hero-wrapper::after {
+    height: 36px;
   }
 
   .site-header__container {
@@ -485,6 +521,10 @@ img {
     max-width: 465px;
     font-size: 60px;
     line-height: 1;
+  }
+
+  .hero__img {
+    width: 480px;
   }
 
   .test-cta__box::after {
@@ -537,6 +577,10 @@ img {
   .hero__heading {
     max-width: 80%;
     font-size: 50px;
+  }
+
+  .hero__img {
+    width: 300px;
   }
 
   .hero__button {
