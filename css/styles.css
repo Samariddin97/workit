@@ -180,6 +180,23 @@ img {
   padding-bottom: 255px;
 }
 
+.site-header-hero-wrapper__circles1{
+  position: absolute;
+  z-index: 1;
+  top: 167px;
+  left: -70px;
+  transform: rotate(-152deg);
+}
+
+.site-header-hero-wrapper__circles2{
+  position: absolute;
+  z-index: 1;
+  top: 348px;
+  right: -50px;
+  transform: rotate(-56deg);
+}
+
+
 .site-header-hero-wrapper::after {
   content: "";
   position: absolute;
